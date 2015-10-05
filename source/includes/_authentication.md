@@ -4,6 +4,19 @@ In order to be able to make requests to the Derocku API, you should first obtain
 
 ## REST API
 
+```http
+GET /api/v1/service/ HTTP/1.1
+Host: dashboard.derocku.co
+Authorization: ApiKey username:apikey
+Accept: application/json
+```
+
+```shell
+derocku login -u username -p apikey
+```
+
+> Make sure to replace **username** with your username and **apikey** with your API key
+
 The Derocku REST API is reachable through the following hostname:
 
 `https://dashboard.derocku.io/`
@@ -20,15 +33,3 @@ HTTP responses are given in JSON format, so the following `Accept` header is req
 You must replace <code>apikey</code> with your personal API key.
 </aside>
 
-```http
-GET /api/v1/service/ HTTP/1.1
-Host: dashboard.derocku.co
-Authorization: ApiKey username:apikey
-Accept: application/json
-```
-
-```shell
-derocku login -u username -p apikey
-```
-
-> Make sure to replace **username** with your username and **apikey** with your API key
