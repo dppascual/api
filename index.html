@@ -107,13 +107,24 @@ Remember — a happy kitten is an authenticated kitten!
 
           <h1 id="introduction">Introduction</h1>
 
-<p>Kittn currently offers a HTTP REST API and a Websocket Stream API which are used by both the <a href="https://dashboard.derocku.io">Web UI</a> and the <a href="https://www.derocku.io">CLI</a>. In this document you will find all API operations currently supported in the platform.</p>
+<p>Derocku currently offers a HTTP REST API and a Websocket Stream API which are used by both the <a href="https://dashboard.derocku.io">Web UI</a> and the <a href="https://www.derocku.io">CLI</a>. In this document you will find all API operations currently supported in the platform.</p>
 
           <h1 id="authentication">Authentication</h1>
 
 <p>In order to be able to make requests to the Derocku API, you should first obtain an ApiKey for your account. For this, log into Derocku, click on the menu on the upper right corner of the screen, select <code class="prettyprint">Account</code> info and then select <code class="prettyprint">Api Key</code>.</p>
 
 <h2 id="rest-api">REST API</h2>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/api/v1/service/</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">dashboard.derocku.co</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">ApiKey username:apikey</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+</code></pre>
+<pre class="highlight shell"><code>derocku login -u username -p apikey
+</code></pre>
+
+<blockquote>
+<p>Make sure to replace <strong>username</strong> with your username and <strong>apikey</strong> with your API key</p>
+</blockquote>
 
 <p>The Derocku REST API is reachable through the following hostname:</p>
 
@@ -130,17 +141,6 @@ Remember — a happy kitten is an authenticated kitten!
 <aside class="notice">
 You must replace <code>apikey</code> with your personal API key.
 </aside>
-<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/api/v1/service/</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">dashboard.derocku.co</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">ApiKey username:apikey</span>
-<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
-</code></pre>
-<pre class="highlight shell"><code>derocku login -u username -p apikey
-</code></pre>
-
-<blockquote>
-<p>Make sure to replace <strong>username</strong> with your username and <strong>apikey</strong> with your API key</p>
-</blockquote>
 
           <h1 id="errors">Errors</h1>
 
